@@ -1,4 +1,4 @@
-module github.com/fortnoxab/jsonlog
+module github.com/fortnoxab/coredns-jsonlog
 
 go 1.23.0
 
