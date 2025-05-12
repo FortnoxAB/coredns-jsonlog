@@ -48,9 +48,9 @@ func (l JsonLogger) ServeDNS(ctx context.Context, w dns.ResponseWriter, r *dns.M
 
 	if responseClass >= l.logLevel {
 		if responseClass == response.Error {
-			l.logger.Error(state.Name(), attrs...)
+			l.logger.Error(state.Name(), slog.Group("coredns", attrs...))
 		} else {
-			l.logger.Info(state.Name(), attrs...)
+			l.logger.Info(state.Name(), slog.Group("coredns", attrs...))
 		}
 	}
 
